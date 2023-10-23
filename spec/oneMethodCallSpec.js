@@ -45,6 +45,24 @@ describe( '1) Method Call', function (){
 
     });
 
+    it('Index of', function (){
+
+        let resultNumber = peoples.indexOf( 'Emil');
+
+        expect(resultNumber).toEqual(2)  ;
+
+    });
+
+    it('Is Array', function (){
+
+        let resultBoolean = Array.isArray(fruits);
+
+        expect(resultBoolean).toBeTrue() ;
+
+    });
+
+
+
 
 
 
