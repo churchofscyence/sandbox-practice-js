@@ -1,13 +1,13 @@
-describe( '1) Method Call', function (){
+describe( 'Master - Array - Method Call', function (){
 
     let fruits;
     let peoples;
-    let orderInteger;
+    let order_integer;
 
     beforeEach(function() {
         fruits = [ 'Banana', 'Orange','Melon', 'Apple', 'Mango', 'Berries', 'Watermelon'];
         peoples = ['Cecilie', 'Lone', 'Emil','Tobias', 'Linus'];
-        orderInteger = [1,2,3,4,5,6,7,8,9,10,11,12];
+        order_integer = [1,2,3,4,5,6,7,8,9,10,11,12];
     });
 
     it('Concatenate', function (){
@@ -22,9 +22,9 @@ describe( '1) Method Call', function (){
 
     it('CopyWithin', function (){
 
-        orderInteger.copyWithin( 6, 0, 3)
+        order_integer.copyWithin( 6, 0, 3)
 
-        expect([ 1,2,3,4,5,6,1,2,3,10,11,12]).toEqual(orderInteger) ;
+        expect([ 1,2,3,4,5,6,1,2,3,10,11,12]).toEqual(order_integer) ;
 
     });
 
@@ -108,6 +108,14 @@ describe( '1) Method Call', function (){
         let resultString = fruits.toString();
 
         expect(resultString).toEqual( 'Banana,Orange,Melon,Apple,Mango,Berries,Watermelon');
+
+    });
+    it('Value To', function (){
+
+        //[ 'Banana', 'Orange','Melon', 'Apple', 'Mango', 'Berries', 'Watermelon'];
+        let resultString = fruits.valueOf();
+
+        expect(resultString).toEqual( [ 'Banana', 'Orange','Melon', 'Apple', 'Mango', 'Berries', 'Watermelon']);
 
     });
 
