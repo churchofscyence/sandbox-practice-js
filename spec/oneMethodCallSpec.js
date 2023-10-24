@@ -2,54 +2,54 @@ describe( '1) Method Call', function (){
 
     let fruits;
     let peoples;
+    let orderInteger;
 
     beforeEach(function() {
         fruits = [ 'Banana', 'Orange','Melon', 'Apple', 'Mango', 'Berries', 'Watermelon'];
         peoples = ['Cecilie', 'Lone', 'Emil','Tobias', 'Linus'];
+        orderInteger = [1,2,3,4,5,6,7,8,9,10,11,12];
     });
 
     it('Concatenate', function (){
 
-        let result = fruits.concat( peoples );
+        let resultArray = fruits.concat( peoples );
 
         expect([ 'Banana', 'Orange','Melon', 'Apple',
                         'Mango', 'Berries', 'Watermelon','Cecilie', 'Lone',
-                        'Emil','Tobias', 'Linus'] ).toEqual(result) ;
+                        'Emil','Tobias', 'Linus'] ).toEqual(resultArray) ;
 
     });
 
     it('CopyWithin', function (){
 
-        //     0,       1,      2,        3,       4,       5,          6
-        //[ 'Banana', 'Orange','Melon', 'Apple', 'Mango', 'Berries', 'Watermelon']
-        let result = fruits.copyWithin( 2, 3, 5);
 
-        expect([ 'Banana', 'Orange',
-            'Apple', 'Mango', 'Mango', 'Berries', 'Watermelon']).toEqual(result) ;
+        let changeResult = orderInteger.copyWithin( 6, 0, 3);
+
+        expect([ 1,2,3,4,5,6,1,2,3,10,11,12]).toEqual(changeResult) ;
 
     });
 
     it('Fill', function (){
 
-        let result = peoples.fill( "X");
+        let changeResult = fruits.fill( "Kiwi");
 
-        expect(['X', 'X', 'X','X', 'X']).toEqual(result) ;
+        expect(["Kiwi", "Kiwi", "Kiwi","Kiwi", "Kiwi", "Kiwi","Kiwi"]).toEqual(changeResult) ;
 
     });
 
     it('Includes', function (){
 
-        let resultFalse = peoples.includes( "X");
+        let resultBoolean = fruits.includes( "Mango");
 
-        expect(resultFalse).toBeFalse() ;
+        expect(resultBoolean).toBeTrue() ;
 
     });
 
     it('Index of', function (){
 
-        let resultNumber = peoples.indexOf( 'Emil');
+        let resultNumber = fruits.indexOf("Mango");
 
-        expect(resultNumber).toEqual(2)  ;
+        expect(resultNumber).toEqual(4)  ;
 
     });
 
