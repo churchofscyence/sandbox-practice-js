@@ -12,20 +12,37 @@ describe( 'Master - Reg Expr - Groups And Ranges', function () {
         var regex = /(red|green)/g;
         //Learning JavaScript
 
-        console.log();
         expect(inputString.replace(regex, 'X')).toEqual('re apple, X apple, X apple, X apple, gren apple, gr apple, blue apple, yellow apple');
     });
 
-    it('2 XX', function () {
-        expect(1).toEqual(1);
+    it('Matches Any One', function () {
+        let inputString = 'With no rivers or wells for fresh water';
+
+        //Learning JavaScript
+        var regex = /[aeiouy]/g;
+        //Learning JavaScript
+
+        expect(inputString.replace(regex, 'X')).toEqual('WXth nX rXvXrs Xr wXlls fXr frXsh wXtXr');
     });
 
-    it('3 XX', function () {
-        expect(1).toEqual(1);
+    it('Negated', function () {
+        let inputString = 'brisket chop non-profit';
+
+        //Learning JavaScript
+        var regex = /[^aeiouy]/g;
+        //Learning JavaScript
+
+        expect(inputString.replace(regex, 'X')).toEqual('XXiXXeXXXXoXXXoXXXXoXiX');
     });
 
-    it('4 XX', function () {
-        expect(1).toEqual(1);
+    it('Capturing Group', function () {
+        let inputString = 'Mom loves Mom is the sentences';
+
+        //Learning JavaScript
+        var regex = /(Mom) loves \1/;
+        //Learning JavaScript
+
+        expect(inputString.replace(regex, 'X')).toEqual('X is the sentences');
     });
 
 });
