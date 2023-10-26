@@ -1,4 +1,4 @@
-describe( 'Master - Reg Expr - Method Calls', function () {
+describe( 'Master - Reg Expr - Objects', function () {
 
 
     beforeEach(function () {
@@ -9,7 +9,9 @@ describe( 'Master - Reg Expr - Method Calls', function () {
 
         let inputString = 'The fat cat ran down the street by the Cat Club.';
 
+        //Learning JavaScript
         var regex = /cat/g;
+        //Learning JavaScript
 
         let resultString = inputString.replace(regex , "X");
 
@@ -20,7 +22,9 @@ describe( 'Master - Reg Expr - Method Calls', function () {
 
         let inputString = 'The fat cat ran down the street by the Cat Club.';
 
+        //Learning JavaScript
         var regex = new RegExp("cat", "gi");
+        //Learning JavaScript
 
         let resultString = inputString.replace(regex , "X");
 
