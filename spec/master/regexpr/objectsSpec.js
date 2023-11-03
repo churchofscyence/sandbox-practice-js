@@ -5,30 +5,26 @@ describe( 'Master - Reg Expr - Objects', function () {
 
     });
 
-    it('Object Notation', function () {
+    it('(replaceMethod) - Object Notation', function () {
 
-        let inputString = 'The fat cat ran down the street by the Cat Club.';
+        let fatCat = 'The fat cat ran down the street by the Cat Club.';
 
-        //Learning JavaScript
-        var regex = /cat/g;
-        //Learning JavaScript
+        let replaceMethod = fatCat.replace(/cat/g , "X");
 
-        let resultString = inputString.replace(regex , "X");
-
-        expect(resultString).toEqual('The fat X ran down the street by the Cat Club.');
+        expect(replaceMethod).toEqual('The fat X ran down the street by the Cat Club.');
 
     });
-    it('Object Constructor', function () {
+    it('(replaceMethod) - Object Constructor', function () {
 
-        let inputString = 'The fat cat ran down the street by the Cat Club.';
+        let fatCat = 'The fat cat ran down the street by the Cat Club.';
 
         //Learning JavaScript
         var regex = new RegExp("cat", "gi");
         //Learning JavaScript
 
-        let resultString = inputString.replace(regex , "X");
+        let replaceMethod = fatCat.replace(regex , "X");
 
-        expect(resultString).toEqual('The fat X ran down the street by the X Club.');
+        expect(replaceMethod).toEqual('The fat X ran down the street by the X Club.');
 
     });
 

@@ -4,45 +4,40 @@ describe( 'Master - Reg Expr - Groups And Ranges', function () {
 
     });
 
-    it('Matches Either', function () {
+    it('(replaceMethod) - Matches Either', function () {
 
-        let inputString = 're apple, green apple, red apple, green apple, gren apple, gr apple, blue apple, yellow apple';
+        let apple = 're apple, green apple, red apple, green apple, gren apple, gr apple, blue apple, yellow apple';
 
-        //Learning JavaScript
-        var regex = /(red|green)/g;
-        //Learning JavaScript
+        let replaceMethod = apple.replace(/(red|green)/g, 'X');
 
-        expect(inputString.replace(regex, 'X')).toEqual('re apple, X apple, X apple, X apple, gren apple, gr apple, blue apple, yellow apple');
+        expect(replaceMethod).toEqual('re apple, X apple, X apple, X apple, gren apple, gr apple, blue apple, yellow apple');
     });
 
-    it('Matches Any One', function () {
-        let inputString = 'With no rivers or wells for fresh water';
+    it('(replaceMethod) - Matches Any One', function () {
 
-        //Learning JavaScript
-        var regex = /[aeiouy]/g;
-        //Learning JavaScript
+        let river = 'With no rivers or wells for fresh water';
 
-        expect(inputString.replace(regex, 'X')).toEqual('WXth nX rXvXrs Xr wXlls fXr frXsh wXtXr');
+        let replaceMethod = river.replace(/[aeiouy]/g, 'X');
+
+        expect(replaceMethod).toEqual('WXth nX rXvXrs Xr wXlls fXr frXsh wXtXr');
     });
 
-    it('Negated', function () {
-        let inputString = 'brisket chop non-profit';
+    it('(replaceMethod) - Negated', function () {
 
-        //Learning JavaScript
-        var regex = /[^aeiouy]/g;
-        //Learning JavaScript
+        let brisket = 'brisket chop non-profit';
 
-        expect(inputString.replace(regex, 'X')).toEqual('XXiXXeXXXXoXXXoXXXXoXiX');
+        let replaceMethod = brisket.replace(/[^aeiouy]/g, 'X');
+
+        expect(replaceMethod).toEqual('XXiXXeXXXXoXXXoXXXXoXiX');
     });
 
-    it('Capturing Group', function () {
-        let inputString = 'Mom loves Mom is the sentences';
+    it('(replaceMethod) - Capturing Group', function () {
 
-        //Learning JavaScript
-        var regex = /(Mom) loves \1/;
-        //Learning JavaScript
+        let mom = 'Mom loves Mom is the sentences';
 
-        expect(inputString.replace(regex, 'X')).toEqual('X is the sentences');
+        let replaceMethod = mom.replace(/(Mom) loves \1/, 'X');
+
+        expect(replaceMethod ).toEqual('X is the sentences');
     });
 
 });

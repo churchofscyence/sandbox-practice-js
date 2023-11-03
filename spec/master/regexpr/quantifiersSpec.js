@@ -4,78 +4,78 @@ describe( 'Master - Reg Expr - Quantifiers', function () {
 
     });
 
-    it('At Least One', function () {
+    it('(replaceMethod) - At Least One', function () {
 
         let w3Schools_Hellooo = 'Hellooo World! Hello W3Schools!';
 
-        let result = w3Schools_Hellooo.replace(/o+/g, 'X')
+        let replaceMethod = w3Schools_Hellooo.replace(/o+/g, 'X')
 
-        expect(result).toEqual('HellX WXrld! HellX W3SchXls!');
+        expect(replaceMethod).toEqual('HellX WXrld! HellX W3SchXls!');
     });
 
-    it('Zero Or More', function () {
+    it('(replaceMethod) - Zero Or More', function () {
 
         let decimalPlace = '1, 100 or 1000?';
 
-        let result = decimalPlace.replace(/10*/g, 'X')
+        let replaceMethod = decimalPlace.replace(/10*/g, 'X')
 
-        expect(result).toEqual('X, X or X?');
+        expect(replaceMethod).toEqual('X, X or X?');
     });
 
-    it('Zero Or One', function () {
+    it('(replaceMethod) - Zero Or One', function () {
 
         let decimalPlace = '1, 100 or 1000?';
 
-        let result = decimalPlace.replace(/10?/g, 'X')
+        let replaceMethod = decimalPlace.replace(/10?/g, 'X')
 
-        expect(result).toEqual('X, X0 or X00?');
+        expect(replaceMethod).toEqual('X, X0 or X00?');
     });
 
-    it('Sequence Of - Four', function () {
+    it('(replaceMethod) - Sequence Of - Four', function () {
 
         let decimalPlace = '1, 100 or 1000?';
 
-        let result = decimalPlace.replace(/\d{4}/g, 'X')
+        let replaceMethod = decimalPlace.replace(/\d{4}/g, 'X')
 
-        expect(result).toEqual('1, 100 or X?');
+        expect(replaceMethod).toEqual('1, 100 or X?');
     });
 
-    it('Sequence Of - Three - Four', function () {
+    it('(replaceMethod) - Sequence Of - Three - Four', function () {
 
         let decimalPlace = '1, 100 or 1000?';
 
-        let result = decimalPlace.replace(/\d{3,4}/g, 'X')
+        let replaceMethod = decimalPlace.replace(/\d{3,4}/g, 'X')
 
-        expect(result).toEqual('1, X or X?');
+        expect(replaceMethod).toEqual('1, X or X?');
     });
 
 
-    it('Sequence Of - Three', function () {
+    it('(replaceMethod) - Sequence Of - Three', function () {
 
         let decimalPlace = '1, 100 or 1000?';
 
-        let result = decimalPlace.replace(/\d{3,}/g, 'X')
+        let replaceMethod = decimalPlace.replace(/\d{3,}/g, 'X')
 
-        expect(result).toEqual('1, X or X?');
+        expect(replaceMethod).toEqual('1, X or X?');
     });
 
-    it('Specific String', function () {
+    it('(replaceMethod) - Specific String', function () {
 
         let isAll = 'Is this all there is';
 
-        let result = isAll.replace(/is(?= all)/g, 'X')
+        let replaceMethod = isAll.replace(/is(?= all)/g, 'X')
 
-        expect(result).toEqual('Is thX all there is');
+        expect(replaceMethod).toEqual('Is thX all there is');
     });
 
 
-    it('Non Specific String', function () {
+    it('(replaceMethod) - Non Specific String', function () {
 
         let isAll = 'Is this all there is';
 
-        let result = isAll.replace(/is(?! all)/gi, 'X')
+        let replaceMethod = isAll.replace(/is(?! all)/gi, 'X')
 
-        expect(result).toEqual('X this all there X');
+        expect(replaceMethod).toEqual('X this all there X');
     });
 
 });

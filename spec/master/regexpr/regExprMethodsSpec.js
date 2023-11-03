@@ -5,46 +5,51 @@ describe( 'Master - Reg Expr - Reg Expr Methods', function () {
 
     });
 
-    it('Exec', function () {
+    it('(execMethod) - Exec', function () {
 
-        let inputString = 'table football, foosball';
-        let outputArray = [];
-        let tempArray;
+        let football = 'table football, foosball';
+        let  empty = [];
+        let execMethod;
 
         //Learning JavaScript
         var regex = RegExp("foo*", "g");
         //Learning JavaScript
 
-        while ((tempArray = regex.exec(inputString)) !== null) {
-            outputArray.push(tempArray);
+        while ((execMethod = regex.exec(football)) !== null) {
+            empty.push(execMethod);
         };
 
         //['foo', index: 6, input: 'table football, foosball', groups: undefined]"
 
-        expect(outputArray[0].index).toEqual(6);
+        expect(empty[0].index).toEqual(6);
 
         //['foo', index: 16, input: 'table football, foosball', groups: undefined]"
 
-        expect(outputArray[1].index).toEqual(16);
+        expect(empty[1].index).toEqual(16);
 
 
     });
 
-    it('Test', function () {
+    it(' (returnBoolean) - Test', function () {
 
-        let inputString = 'table football, foosball';
-        let outputArray = [];
+        let football = 'table football, foosball';
+        let empty = [];
+        let returnBoolean;
 
         //Learning JavaScript
         var regex = new RegExp("foo*", "g");
         //Learning JavaScript
 
-        while (regex.test(inputString)){
-            outputArray.push({ "lastIndex":regex.lastIndex });
+        while ( returnBoolean = regex.test(football)){
+            expect(returnBoolean).toEqual(true);
+
+            empty.push({ "lastIndex":regex.lastIndex });
         };
 
-        expect(outputArray[0].lastIndex).toEqual(9);
-        expect(outputArray[1].lastIndex).toEqual(19);
+        expect(returnBoolean).toEqual(false);
+
+        expect(empty[0].lastIndex).toEqual(9);
+        expect(empty[1].lastIndex).toEqual(19);
 
     });
 
