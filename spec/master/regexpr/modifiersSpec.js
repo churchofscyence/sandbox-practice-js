@@ -4,26 +4,41 @@ describe( 'Master - Reg Expr - Modifiers', function () {
 
     });
 
-    it('1 XX', function () {
-        expect(1).toEqual(1);
+    it('Start End Indices', function () {
+
+        let foo = 'foo bar foo bar foo';
+
+        let result = foo.replace(/foo/gd, 'X')
+
+        expect(result).toEqual('X bar X bar X');
     });
-    it('2 XX', function () {
-        expect(1).toEqual(1);
+
+    it('Global', function () {
+
+        let foo = 'foo bar foo bar foo';
+
+        let result = foo.replace(/foo/g, 'X')
+
+        expect(result).toEqual('X bar X bar X');
     });
-    it('3 XX', function () {
-        expect(1).toEqual(1);
+
+    it('Case Insensitive', function () {
+
+        let foo_case = 'Foo bar foo bar foo';
+
+        let result = foo_case.replace(/foo/gi, 'X')
+
+        expect(result).toEqual('X bar X bar X');
     });
-    it('4 XX', function () {
-        expect(1).toEqual(1);
+
+    it('Multi Line Search', function () {
+
+        let cool = 'A foo is cool\nA foo is big';
+
+        let result = cool.replace(/foo/gm, 'X')
+
+        expect(result).toEqual('A X is cool\nA X is big');
     });
-    it('5 XX', function () {
-        expect(1).toEqual(1);
-    });
-    it('6 XX', function () {
-        expect(1).toEqual(1);
-    });
-    it('7 XX', function () {
-        expect(1).toEqual(1);
-    });
+
 
 });
