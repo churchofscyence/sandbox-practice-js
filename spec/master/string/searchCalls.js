@@ -5,7 +5,7 @@ describe( 'Master - String - Search Calls', function () {
 
     });
 
-    it('Ends With', function () {
+    it('(resultBoolean) - Ends With', function () {
 
         let resultBoolean = "Hello World".endsWith("World");
 
@@ -13,7 +13,7 @@ describe( 'Master - String - Search Calls', function () {
 
     });
 
-    it('Include', function () {
+    it('(resultBoolean) - Include', function () {
 
         let resultBoolean = "The rain in SPAIN stays mainly in the plain".includes("SPAIN");
 
@@ -21,15 +21,15 @@ describe( 'Master - String - Search Calls', function () {
 
     });
 
-    it('Index Of', function () {
+    it('(resultNumber) - Index Of', function () {
 
-        let resultNumber= "The rain in SPAIN stays mainly in the plain".indexOf ("SPAIN");
+        let resultNumber = "The rain in SPAIN stays mainly in the plain".indexOf ("SPAIN");
 
         expect(resultNumber).toEqual(12);
 
     });
 
-    it('Last Index Of', function () {
+    it('(resultNumber) - Last Index Of', function () {
 
         let resultNumber = "Hello planet earth, you are a great planet.".lastIndexOf("planet");
 
@@ -37,7 +37,7 @@ describe( 'Master - String - Search Calls', function () {
 
     });
 
-    it('Locale Compare', function () {
+    it('(resultNumber) - Locale Compare', function () {
 
         let resultNumber = "A".localeCompare("C");
 
@@ -45,7 +45,7 @@ describe( 'Master - String - Search Calls', function () {
 
     });
 
-    it('Match', function () {
+    it('(resultString) - Match', function () {
 
         let resultString = "The rain in SPAIN stays mainly in the plain".match(/ain/g);
 
@@ -53,7 +53,7 @@ describe( 'Master - String - Search Calls', function () {
 
     });
 
-    it('Replace', function () {
+    it('(resultString) - Replace', function () {
 
         let resultString = "Hello World".replace("World", "Tom");
 
@@ -61,7 +61,7 @@ describe( 'Master - String - Search Calls', function () {
 
     });
 
-    it('Search', function () {
+    it('(resultNumber) - Search', function () {
 
         let resultNumber = "Hello World".search("World");
 
@@ -69,7 +69,7 @@ describe( 'Master - String - Search Calls', function () {
 
     });
 
-    it('Start With', function () {
+    it('(resultBoolean) - Start With', function () {
 
         let resultBoolean = "The rain in SPAIN stays mainly in the plain".startsWith("The");
 

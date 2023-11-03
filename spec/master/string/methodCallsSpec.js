@@ -5,7 +5,7 @@ describe( 'Master - String - Method Calls', function () {
 
     });
 
-    it('Character At', function () {
+    it('(resultString) - Character At', function () {
 
         let resultString = "Hello World".charAt(0);
 
@@ -13,7 +13,7 @@ describe( 'Master - String - Method Calls', function () {
 
     });
 
-    it('Character Code At', function () {
+    it('(resultNumber) - Character Code At', function () {
 
         let resultNumber = "Hello World".charCodeAt(0);
 
@@ -21,7 +21,7 @@ describe( 'Master - String - Method Calls', function () {
 
     });
 
-    it('Concatenate', function () {
+    it('(resultString) - Concatenate', function () {
 
         let resultString = "Tom".concat(" ","Bob"," ", "Smith");
 
@@ -29,7 +29,7 @@ describe( 'Master - String - Method Calls', function () {
 
     });
 
-    it('From Character Code', function () {
+    it('(resultString) - From Character Code', function () {
 
         let resultString = String.fromCharCode(65);
 
@@ -37,7 +37,7 @@ describe( 'Master - String - Method Calls', function () {
 
     });
 
-    it('Length', function () {
+    it('(resultNumber) - Length', function () {
 
         let resultNumber = "Hello World".length;
 
@@ -45,7 +45,7 @@ describe( 'Master - String - Method Calls', function () {
 
     });
 
-    it('Repeat', function () {
+    it('(resultString) - Repeat', function () {
 
         let resultString = "Hello World".repeat(2);
 
@@ -53,7 +53,7 @@ describe( 'Master - String - Method Calls', function () {
 
     });
 
-    it('Slice', function () {
+    it('(resultString) - Slice', function () {
 
         let resultString = "Hello World".slice(0, 5);
 
@@ -61,7 +61,7 @@ describe( 'Master - String - Method Calls', function () {
 
     });
 
-    it('Splice', function () {
+    it('(resultArray) - Splice', function () {
 
         let resultArray = "The rain in SPAIN stays mainly in the plain".split(" ");
 
@@ -69,7 +69,7 @@ describe( 'Master - String - Method Calls', function () {
 
     });
 
-    it('Substr', function () {
+    it('(resultString) - Substr', function () {
 
         let resultString = "Hello World".substr(1, 4);
 
@@ -77,7 +77,7 @@ describe( 'Master - String - Method Calls', function () {
 
     });
 
-    it('Substring', function () {
+    it('(resultString) - Substring', function () {
 
         let resultString = "Hello World".substring(1, 4);
 
@@ -85,7 +85,7 @@ describe( 'Master - String - Method Calls', function () {
 
     });
 
-    it('To Lower Case', function () {
+    it('(resultString) - To Lower Case', function () {
 
         let resultString = "Hello World".toLowerCase();
 
@@ -93,7 +93,7 @@ describe( 'Master - String - Method Calls', function () {
 
     });
 
-    it('To String', function () {
+    it('(resultString) - To String', function () {
 
         let resultString = "Hello World".toString();
 
@@ -101,7 +101,7 @@ describe( 'Master - String - Method Calls', function () {
 
     });
 
-    it('To Upper Case', function () {
+    it('(resultString) - To Upper Case', function () {
 
         let resultString = "Hello World".toUpperCase();
 
@@ -109,7 +109,7 @@ describe( 'Master - String - Method Calls', function () {
 
     });
 
-    it('Trim', function () {
+    it('(resultString) - Trim', function () {
 
         let resultString = " Hello World ".trim();
 
@@ -117,7 +117,7 @@ describe( 'Master - String - Method Calls', function () {
 
     });
 
-    it('Value Of', function () {
+    it('(resultString) - Value Of', function () {
 
         let resultString = typeof "Hello World".valueOf();
 
