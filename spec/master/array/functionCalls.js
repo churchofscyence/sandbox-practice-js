@@ -2,15 +2,15 @@ describe( 'Master - Array - Function Calls', function () {
 
     let fruits;
     let peoples;
-    let empty;
+    let emptyArray;
 
     beforeEach(function () {
         fruits = [ 'Banana', 'Orange','Melon', 'Apple', 'Mango', 'Berries', 'Watermelon'];
         peoples = ['Cecilie', 'Lone', 'Emil','Tobias', 'Linus'];
-        empty = [];
+        emptyArray = [];
     });
 
-    it('Every', function () {
+    it('(resultBoolean) - Every', function () {
 
         function checkNames(name) {
 
@@ -23,7 +23,7 @@ describe( 'Master - Array - Function Calls', function () {
         expect(resultBoolean).toBeFalsy();
     });
 
-    it('Filter', function () {
+    it('(resultArray) - Filter', function () {
 
         function checkNames(name) {
 
@@ -36,7 +36,7 @@ describe( 'Master - Array - Function Calls', function () {
         expect(resultArray).toEqual(['Watermelon']);
     });
 
-    it('Find', function () {
+    it('(resultString) - Find', function () {
 
         function checkNames(name) {
 
@@ -49,7 +49,7 @@ describe( 'Master - Array - Function Calls', function () {
         expect(resultString).toEqual('Watermelon');
     });
 
-    it('Find Index', function () {
+    it('(resultNumber) - Find Index', function () {
 
         function checkNames(name) {
 
@@ -62,7 +62,7 @@ describe( 'Master - Array - Function Calls', function () {
         expect(resultNumber).toEqual(6);
     });
 
-    it('From', function () {
+    it('(resultArray) - From', function () {
 
         var appendName = {
 
@@ -75,34 +75,34 @@ describe( 'Master - Array - Function Calls', function () {
         expect(resultArray).toEqual(['Cecilie Smith', 'Lone Smith', 'Emil Smith','Tobias Smith', 'Linus Smith']);
     });
 
-    it('Reduce', function () {
+    it('(emptyArray) - Reduce', function () {
 
         function ucase (total,currentValue, index,arr) {
 
-            empty.push( index + " : " + currentValue) ;
+            emptyArray.push( index + " : " + currentValue) ;
 
         } ;
 
         fruits.reduce(ucase,0);
 
-        expect(empty).toEqual([ '0 : Banana', '1 : Orange','2 : Melon',
+        expect(emptyArray).toEqual([ '0 : Banana', '1 : Orange','2 : Melon',
             '3 : Apple', '4 : Mango', '5 : Berries', '6 : Watermelon']);
     });
 
-    it('Reduce Right', function () {
+    it('(emptyArray) - Reduce Right', function () {
 
         function ucase (total,currentValue, index,arr) {
 
-            empty.push( index + " : " + currentValue) ;
+            emptyArray.push( index + " : " + currentValue) ;
 
         } ;
 
         fruits.reduceRight(ucase,0);
 
-        expect(empty).toEqual([ '6 : Watermelon', '5 : Berries', '4 : Mango',
+        expect(emptyArray).toEqual([ '6 : Watermelon', '5 : Berries', '4 : Mango',
             '3 : Apple', '2 : Melon','1 : Orange','0 : Banana']);
     });
-    it('Some', function () {
+    it('(resultBoolean) - Some', function () {
 
         function checkNames(name) {
 

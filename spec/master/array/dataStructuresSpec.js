@@ -1,73 +1,73 @@
 describe( 'Master - Array - Data Structures', function (){
 
     let fruits;
-    let empty;
+    let emptyArray;
     let peoples;
     let unique_integer;
 
 
     beforeEach(function() {
         fruits = [ 'Banana', 'Orange','Melon', 'Apple', 'Mango', 'Berries', 'Watermelon'];
-        empty = [];
+        emptyArray = [];
         peoples = ['Cecilie', 'Lone', 'Emil','Tobias', 'Linus'];
         unique_integer = [3,8,13,11,4,6,2,1,12,15,14,5,7,10,9];
     });
 
-    it('Entries', function (){
+    it('(emptyArray) - Entries', function (){
 
         for (const [index, element] of fruits.entries()) {
 
-            empty.push( index + " : " + element);
+            emptyArray.push( index + " : " + element);
 
         } ;
 
         expect([ '0 : Banana', '1 : Orange','2 : Melon', '3 : Apple',
-            '4 : Mango', '5 : Berries', '6 : Watermelon']).toEqual(empty) ;
+            '4 : Mango', '5 : Berries', '6 : Watermelon']).toEqual(emptyArray) ;
 
     });
 
-    it('For Each', function (){
+    it('(emptyArray) - For Each', function (){
 
         function checkNames(item,index) {
 
-            empty.push( index + " : " + item );
+            emptyArray.push( index + " : " + item );
 
         } ;
 
         fruits.forEach(checkNames);
 
         expect([ '0 : Banana', '1 : Orange','2 : Melon', '3 : Apple',
-            '4 : Mango', '5 : Berries', '6 : Watermelon']).toEqual(empty) ;
+            '4 : Mango', '5 : Berries', '6 : Watermelon']).toEqual(emptyArray) ;
 
     });
 
-    it('Keys', function (){
+    it('(emptyArray) - Keys', function (){
 
         for (let x of fruits.keys()) {
 
-            empty.push(x);
+            emptyArray.push(x);
 
         } ;
 
-        expect([ 0, 1,2, 3,4, 5, 6]).toEqual(empty) ;
+        expect([ 0, 1,2, 3,4, 5, 6]).toEqual(emptyArray) ;
 
     });
 
-    it('Map', function (){
+    it('(emptyArray) - Map', function (){
 
         function addLastName (currentValue, index, arr) {
 
-            empty.push(currentValue + " " + this.lastName);
+            emptyArray.push(currentValue + " " + this.lastName);
 
         } ;
 
         peoples.map(addLastName, {lastName: "Smith"});
 
-        expect(['Cecilie Smith', 'Lone Smith', 'Emil Smith','Tobias Smith', 'Linus Smith']).toEqual(empty) ;
+        expect(['Cecilie Smith', 'Lone Smith', 'Emil Smith','Tobias Smith', 'Linus Smith']).toEqual(emptyArray) ;
 
     });
 
-    it('Pop', function (){
+    it('(resultString) - Pop', function (){
 
         let resultString = fruits.pop();
 
@@ -75,7 +75,7 @@ describe( 'Master - Array - Data Structures', function (){
 
     });
 
-    it('Prototype', function (){
+    it('(changeArray) - Prototype', function (){
 
         Array.prototype.ucase = function() {
 
@@ -89,7 +89,7 @@ describe( 'Master - Array - Data Structures', function (){
 
     });
 
-    it('Push', function (){
+    it('(changeArray) - Push', function (){
 
         fruits.push("Kiwi");
 
@@ -97,7 +97,7 @@ describe( 'Master - Array - Data Structures', function (){
 
     });
 
-    it('Shift', function (){
+    it('(resultString) - Shift', function (){
 
         let resultString = fruits.shift();
 
@@ -105,7 +105,7 @@ describe( 'Master - Array - Data Structures', function (){
 
     });
 
-    it('Sort', function (){
+    it('(changeArray) - Sort', function (){
 
         function ascending (a, b) {
 
@@ -119,7 +119,7 @@ describe( 'Master - Array - Data Structures', function (){
 
     });
 
-    it('Unshift', function (){
+    it('(changeArray) - Unshift', function (){
 
         fruits.unshift("Lemon","Pineapple");
 

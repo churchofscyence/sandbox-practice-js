@@ -10,7 +10,7 @@ describe( 'Master - Array - Method Call', function (){
         order_integer = [1,2,3,4,5,6,7,8,9,10,11,12];
     });
 
-    it('Concatenate', function (){
+    it('(resultArray) - Concatenate', function (){
 
         let resultArray = fruits.concat( peoples );
 
@@ -20,7 +20,7 @@ describe( 'Master - Array - Method Call', function (){
 
     });
 
-    it('CopyWithin', function (){
+    it('(changeResult) - CopyWithin', function (){
 
         order_integer.copyWithin( 6, 0, 3)
 
@@ -28,7 +28,7 @@ describe( 'Master - Array - Method Call', function (){
 
     });
 
-    it('Fill', function (){
+    it('(changeResult) - Fill', function (){
 
         fruits.fill( "Kiwi");
 
@@ -36,7 +36,7 @@ describe( 'Master - Array - Method Call', function (){
 
     });
 
-    it('Includes', function (){
+    it('(resultBoolean) - Includes', function (){
 
         let resultBoolean = fruits.includes( "Mango");
 
@@ -44,7 +44,7 @@ describe( 'Master - Array - Method Call', function (){
 
     });
 
-    it('Index of', function (){
+    it('(resultNumber) - Index of', function (){
 
         let resultNumber = fruits.indexOf("Mango");
 
@@ -52,7 +52,7 @@ describe( 'Master - Array - Method Call', function (){
 
     });
 
-    it('Is Array', function (){
+    it('(resultBoolean) - Is Array', function (){
 
         let resultBoolean = Array.isArray(fruits);
 
@@ -60,7 +60,7 @@ describe( 'Master - Array - Method Call', function (){
 
     });
 
-    it('Join', function (){
+    it('(resultString) - Join', function (){
 
         let resultString = fruits.join();
 
@@ -68,7 +68,7 @@ describe( 'Master - Array - Method Call', function (){
 
     });
 
-    it('Last Index Of', function (){
+    it('(resultNumber) - Last Index Of', function (){
 
         let resultNumber = fruits.lastIndexOf("Apple");
 
@@ -76,7 +76,7 @@ describe( 'Master - Array - Method Call', function (){
 
     });
 
-    it('Reverse', function (){
+    it('(resultArray) - Reverse', function (){
 
         //[ 'Banana', 'Orange','Melon', 'Apple', 'Mango', 'Berries', 'Watermelon'];
         let resultArray = fruits.reverse();
@@ -85,7 +85,7 @@ describe( 'Master - Array - Method Call', function (){
             'Melon','Orange','Banana']);
 
     });
-    it('Slice', function (){
+    it('(resultArray) - Slice', function (){
 
         //[ 'Banana', 'Orange','Melon', 'Apple', 'Mango', 'Berries', 'Watermelon'];
         let resultArray = fruits.slice(1,3);
@@ -93,7 +93,7 @@ describe( 'Master - Array - Method Call', function (){
         expect(resultArray).toEqual( ['Orange','Melon']);
 
     });
-    it('Splice', function (){
+    it('(changeResult) - Splice', function (){
 
         //[ 'Banana', 'Orange','Melon', 'Apple', 'Mango', 'Berries', 'Watermelon'];
         fruits.splice(2, 0, "Lemon", "Kiwi");
@@ -102,7 +102,7 @@ describe( 'Master - Array - Method Call', function (){
             'Melon', 'Apple', 'Mango', 'Berries', 'Watermelon']);
 
     });
-    it('To String', function (){
+    it('(resultString) - To String', function (){
 
         //[ 'Banana', 'Orange','Melon', 'Apple', 'Mango', 'Berries', 'Watermelon'];
         let resultString = fruits.toString();
@@ -110,7 +110,7 @@ describe( 'Master - Array - Method Call', function (){
         expect(resultString).toEqual( 'Banana,Orange,Melon,Apple,Mango,Berries,Watermelon');
 
     });
-    it('Value To', function (){
+    it('(resultString) - Value To', function (){
 
         //[ 'Banana', 'Orange','Melon', 'Apple', 'Mango', 'Berries', 'Watermelon'];
         let resultString = fruits.valueOf();
