@@ -7,7 +7,9 @@ describe( 'Master - String - Method Calls', function () {
 
     it('(resultString) - Character At', function () {
 
-        let resultString = "Hello World".charAt(0);
+        let helloWorld = 'Hello World';
+
+        let resultString = helloWorld.charAt(0);
 
         expect(resultString).toEqual('H');
 
@@ -15,7 +17,9 @@ describe( 'Master - String - Method Calls', function () {
 
     it('(resultNumber) - Character Code At', function () {
 
-        let resultNumber = "Hello World".charCodeAt(0);
+        let helloWorld = 'Hello World';
+
+        let resultNumber = helloWorld.charCodeAt(0);
 
         expect(resultNumber).toEqual(72);
 
@@ -23,7 +27,13 @@ describe( 'Master - String - Method Calls', function () {
 
     it('(resultString) - Concatenate', function () {
 
-        let resultString = "Tom".concat(" ","Bob"," ", "Smith");
+        let space = ' ';
+
+        let firstName = 'Tom';
+        let middleName = 'Bob';
+        let lastName = 'Smith';
+
+        let resultString = firstName.concat(space, middleName, space, lastName);
 
         expect(resultString).toEqual('Tom Bob Smith');
 
@@ -39,7 +49,9 @@ describe( 'Master - String - Method Calls', function () {
 
     it('(resultNumber) - Length', function () {
 
-        let resultNumber = "Hello World".length;
+        let helloWorld = 'Hello World';
+
+        let resultNumber = helloWorld.length;
 
         expect(resultNumber).toEqual(11);
 
@@ -47,7 +59,9 @@ describe( 'Master - String - Method Calls', function () {
 
     it('(resultString) - Repeat', function () {
 
-        let resultString = "Hello World".repeat(2);
+        let helloWorld = 'Hello World';
+
+        let resultString = helloWorld.repeat(2);
 
         expect(resultString).toEqual('Hello WorldHello World');
 
@@ -55,7 +69,9 @@ describe( 'Master - String - Method Calls', function () {
 
     it('(resultString) - Slice', function () {
 
-        let resultString = "Hello World".slice(0, 5);
+        let helloWorld = 'Hello World';
+
+        let resultString = helloWorld.slice(0, 5);
 
         expect(resultString).toEqual('Hello');
 
@@ -63,7 +79,9 @@ describe( 'Master - String - Method Calls', function () {
 
     it('(resultArray) - Splice', function () {
 
-        let resultArray = "The rain in SPAIN stays mainly in the plain".split(" ");
+        let spain = 'The rain in SPAIN stays mainly in the plain';
+
+        let resultArray = spain.split(" ");
 
         expect(resultArray).toEqual(['The','rain','in','SPAIN','stays','mainly','in','the','plain']);
 
@@ -71,13 +89,17 @@ describe( 'Master - String - Method Calls', function () {
 
     it('(resultString) - Substr', function () {
 
-        let resultString = "Hello World".substr(1, 4);
+        let helloWorld = 'Hello World';
+
+        let resultString = helloWorld.substr(1, 4);
 
         expect(resultString).toEqual('ello');
 
     });
 
     it('(resultString) - Substring', function () {
+
+        let helloWorld = 'Hello World';
 
         let resultString = "Hello World".substring(1, 4);
 
@@ -87,7 +109,9 @@ describe( 'Master - String - Method Calls', function () {
 
     it('(resultString) - To Lower Case', function () {
 
-        let resultString = "Hello World".toLowerCase();
+        let helloWorld = 'Hello World';
+
+        let resultString = helloWorld.toLowerCase();
 
         expect(resultString).toEqual('hello world');
 
@@ -95,7 +119,9 @@ describe( 'Master - String - Method Calls', function () {
 
     it('(resultString) - To String', function () {
 
-        let resultString = "Hello World".toString();
+        let helloWorld = 'Hello World';
+
+        let resultString = helloWorld.toString();
 
         expect(resultString).toEqual('Hello World');
 
@@ -103,7 +129,9 @@ describe( 'Master - String - Method Calls', function () {
 
     it('(resultString) - To Upper Case', function () {
 
-        let resultString = "Hello World".toUpperCase();
+        let helloWorld = 'Hello World';
+
+        let resultString = helloWorld.toUpperCase();
 
         expect(resultString).toEqual('HELLO WORLD');
 
@@ -111,7 +139,9 @@ describe( 'Master - String - Method Calls', function () {
 
     it('(resultString) - Trim', function () {
 
-        let resultString = " Hello World ".trim();
+        let HelloWorldSpace = ' Hello World ';
+
+        let resultString = HelloWorldSpace.trim();
 
         expect(resultString).toEqual('Hello World');
 
@@ -119,7 +149,9 @@ describe( 'Master - String - Method Calls', function () {
 
     it('(resultString) - Value Of', function () {
 
-        let resultString = typeof "Hello World".valueOf();
+        let helloWorld = 'Hello World';
+
+        let resultString = typeof helloWorld.valueOf();
 
         expect(resultString).toEqual('string');
 

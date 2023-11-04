@@ -7,7 +7,9 @@ describe( 'Master - String - Search Calls', function () {
 
     it('(resultBoolean) - Ends With', function () {
 
-        let resultBoolean = "Hello World".endsWith("World");
+        let helloWorld = 'Hello World';
+
+        let resultBoolean = helloWorld.endsWith("World");
 
         expect(resultBoolean).toBeTrue();
 
@@ -15,7 +17,9 @@ describe( 'Master - String - Search Calls', function () {
 
     it('(resultBoolean) - Include', function () {
 
-        let resultBoolean = "The rain in SPAIN stays mainly in the plain".includes("SPAIN");
+        let spain = 'The rain in SPAIN stays mainly in the plain';
+
+        let resultBoolean = spain.includes("SPAIN");
 
         expect(resultBoolean).toBeTrue();
 
@@ -23,7 +27,9 @@ describe( 'Master - String - Search Calls', function () {
 
     it('(resultNumber) - Index Of', function () {
 
-        let resultNumber = "The rain in SPAIN stays mainly in the plain".indexOf ("SPAIN");
+        let spain = 'The rain in SPAIN stays mainly in the plain';
+
+        let resultNumber = spain.indexOf ("SPAIN");
 
         expect(resultNumber).toEqual(12);
 
@@ -31,7 +37,9 @@ describe( 'Master - String - Search Calls', function () {
 
     it('(resultNumber) - Last Index Of', function () {
 
-        let resultNumber = "Hello planet earth, you are a great planet.".lastIndexOf("planet");
+        let planet = 'Hello planet earth, you are a great planet.';
+
+        let resultNumber = planet.lastIndexOf("planet");
 
         expect(resultNumber).toEqual(36);
 
@@ -39,7 +47,9 @@ describe( 'Master - String - Search Calls', function () {
 
     it('(resultNumber) - Locale Compare', function () {
 
-        let resultNumber = "A".localeCompare("C");
+        let a ='A';
+
+        let resultNumber = a.localeCompare("C");
 
         expect(resultNumber).toEqual(-1);
 
@@ -47,7 +57,9 @@ describe( 'Master - String - Search Calls', function () {
 
     it('(resultString) - Match', function () {
 
-        let resultString = "The rain in SPAIN stays mainly in the plain".match(/ain/g);
+        let spain = 'The rain in SPAIN stays mainly in the plain';
+
+        let resultString = spain.match(/ain/g);
 
         expect(resultString).toEqual(['ain','ain','ain']);
 
@@ -55,7 +67,9 @@ describe( 'Master - String - Search Calls', function () {
 
     it('(resultString) - Replace', function () {
 
-        let resultString = "Hello World".replace("World", "Tom");
+        let helloWorld = 'Hello World';
+
+        let resultString = helloWorld.replace("World", "Tom");
 
         expect(resultString).toEqual('Hello Tom');
 
@@ -63,7 +77,9 @@ describe( 'Master - String - Search Calls', function () {
 
     it('(resultNumber) - Search', function () {
 
-        let resultNumber = "Hello World".search("World");
+        let helloWorld = 'Hello World';
+
+        let resultNumber = helloWorld.search("World");
 
         expect(resultNumber).toEqual(6);
 
@@ -71,7 +87,9 @@ describe( 'Master - String - Search Calls', function () {
 
     it('(resultBoolean) - Start With', function () {
 
-        let resultBoolean = "The rain in SPAIN stays mainly in the plain".startsWith("The");
+        let spain = 'The rain in SPAIN stays mainly in the plain';
+
+        let resultBoolean = spain.startsWith("The");
 
         expect(resultBoolean).toBeTrue();
 
