@@ -77,7 +77,7 @@ describe( 'Master - String - Method Calls', function () {
 
     });
 
-    it('(resultArray) - Splice', function () {
+    it('(resultArray) - Split', function () {
 
         let spain = 'The rain in SPAIN stays mainly in the plain';
 
