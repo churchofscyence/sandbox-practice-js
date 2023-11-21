@@ -61,7 +61,7 @@ describe( 'Master - String - Search Calls', function () {
 
         let resultArray = spain.match(/ain/g);
 
-        expect(resultString).toEqual(['ain','ain','ain']);
+        expect(resultArray).toEqual(['ain','ain','ain']);
 
     });
 
