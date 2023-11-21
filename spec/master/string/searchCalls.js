@@ -55,13 +55,13 @@ describe( 'Master - String - Search Calls', function () {
 
     });
 
-    it('(resultString) - Match', function () {
+    it('(resultArray) - Match', function () {
 
         let spain = 'The rain in SPAIN stays mainly in the plain';
 
-        let resultString = spain.match(/ain/g);
+        let resultArray = spain.match(/ain/g);
 
-        expect(resultString).toEqual(['ain','ain','ain']);
+        expect(resultArray).toEqual(['ain','ain','ain']);
 
     });
 
