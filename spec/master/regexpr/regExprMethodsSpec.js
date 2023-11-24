@@ -30,7 +30,7 @@ describe( 'Master - Reg Expr - Reg Expr Methods', function () {
 
     });
 
-    it(' (returnBoolean) - Test', function () {
+    it(' (regExprReturnBoolean) - Test', function () {
 
         let football = 'table football, foosball';
         let empty = [];
