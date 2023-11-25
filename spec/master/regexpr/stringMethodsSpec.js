@@ -8,7 +8,7 @@ describe( 'Master - Reg Expr - String Methods', function () {
 
         let fox = 'The quick brown fox jumps over the lazy dog. It barked.';
 
-        let matchMethod = fox.match(/[A-Z]/g,)
+        let matchMethod = fox.match(/[A-Z]/g)
 
         expect(matchMethod).toEqual(['T','I']);
     });
