@@ -4,7 +4,7 @@ describe( 'Master - Reg Expr - String Methods', function () {
 
     });
 
-    it('(matchMethod) - Match', function () {
+    it('(resultArray) - Match', function () {
 
         let fox = 'The quick brown fox jumps over the lazy dog. It barked.';
 
