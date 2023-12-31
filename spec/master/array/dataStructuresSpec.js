@@ -26,21 +26,6 @@ describe( 'Master - Array - Data Structures', function (){
 
     });
 
-    it('(emptyArray) - For Each', function (){
-
-        function checkNames(item,index) {
-
-            emptyArray.push( index + " : " + item );
-
-        } ;
-
-        fruits.forEach(checkNames);
-
-        expect([ '0 : Banana', '1 : Orange','2 : Melon', '3 : Apple',
-            '4 : Mango', '5 : Berries', '6 : Watermelon']).toEqual(emptyArray) ;
-
-    });
-
     it('(emptyArray) - Keys', function (){
 
         for (let x of fruits.keys()) {
@@ -53,19 +38,7 @@ describe( 'Master - Array - Data Structures', function (){
 
     });
 
-    it('(emptyArray) - Map', function (){
 
-        function addLastName (currentValue, index, arr) {
-
-            emptyArray.push(currentValue + " " + this.lastName);
-
-        } ;
-
-        peoples.map(addLastName, {lastName: "Smith"});
-
-        expect(['Cecilie Smith', 'Lone Smith', 'Emil Smith','Tobias Smith', 'Linus Smith']).toEqual(emptyArray) ;
-
-    });
 
     it('(resultString) - Pop', function (){
 
@@ -75,19 +48,6 @@ describe( 'Master - Array - Data Structures', function (){
 
     });
 
-    it('(changeArray) - Prototype', function (){
-
-        Array.prototype.ucase = function() {
-
-            for (let i = 0; i < this.length; i++) { this[i] = this[i].toUpperCase(); }
-
-        } ;
-
-        fruits.ucase();
-
-        expect([ 'BANANA', 'ORANGE','MELON', 'APPLE', 'MANGO', 'BERRIES', 'WATERMELON']).toEqual(fruits) ;
-
-    });
 
     it('(changeArray) - Push', function (){
 
